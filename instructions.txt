@@ -90,4 +90,31 @@
 			To https://github.com/AndreasBurghart/meta-custom.git
 			 * [new branch]      master -> master
 			Branch master set up to track remote branch master from origin.
-digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ 
+
+	Example for a later commit:
+	---------------------------
+		
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ vim instructions.txt
+
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ git add instructions.txt 
+
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ git commit 
+			[master c49dd01] added instruction file
+			 1 file changed, 93 insertions(+)
+			 create mode 100644 instructions.txt
+
+	
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ git push -u origin master
+			Username for 'https://github.com': andreas.burghart@digi.com
+			Password for 'https://andreas.burghart@digi.com@github.com': 
+			Counting objects: 3, done.
+			Delta compression using up to 2 threads.
+			Compressing objects: 100% (3/3), done.
+			Writing objects: 100% (3/3), 1.43 KiB | 0 bytes/s, done.
+			Total 3 (delta 1), reused 0 (delta 0)
+			remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+			To https://github.com/AndreasBurghart/meta-custom.git
+			   a69476a..c49dd01  master -> master
+			Branch master set up to track remote branch master from origin.
+			
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$
