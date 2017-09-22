@@ -1,0 +1,93 @@
+
+	• Instructions for the setup
+
+		○ Download the meta-custom example from here:   https://github.com/digi-embedded/meta-custom/archive/ccimx6ul/custom.zip
+	
+		○ Unpack into folder on Linux machine (e.g. /usr/local/source/meta-custom)
+
+
+			$ cd /usr/local/dey-2.2/sources
+			$ wget  https://github.com/digi-embedded/meta-custom/archive/ccimx6ul/custom.zip
+			$ unzip custom.zip
+			$ mv meta-custom-ccimx6ul-custom meta-custom
+			
+			digi@digi-VM:/usr/local/dey-2.2/sources$ ls -la meta-custom
+			
+			total 28
+			drwxrwxr-x  6 digi digi 4096 jul 28 14:47 .
+			drwxrwxr-x 12 digi digi 4096 sep 22 14:00 ..
+			drwxrwxr-x  3 digi digi 4096 jul 28 14:47 conf
+			-rw-rw-r--  1 digi digi 1343 jul 28 14:47 README.md
+			drwxrwxr-x  3 digi digi 4096 jul 28 14:47 recipes-bsp
+			drwxrwxr-x  3 digi digi 4096 jul 28 14:47 recipes-kernel
+			drwxrwxr-x  3 digi digi 4096 jul 28 14:47 sdk
+			
+			digi@digi-VM:/usr/local/dey-2.2/sources$ tree meta-custom
+			meta-custom
+			├── conf
+			│   ├── layer.conf
+			│   └── machine
+			│       └── custom.conf
+			├── README.md
+			├── recipes-bsp
+			│   └── u-boot
+			│       ├── u-boot-dey-2015.04
+			│       │   ├── 0001-Add-custom-platform-from-reference-ccimx6ulstarter.patch
+			│       │   └── custom
+			│       │       ├── boot.txt
+			│       │       └── install_linux_fw_sd.txt
+			│       └── u-boot-dey_2015.04.bbappend
+			├── recipes-kernel
+			│   └── linux
+			│       ├── linux-dey-4.1
+			│       │   ├── 0001-dts-Copy-imx6ul-ccimx6ulstarter-id129.dts-into-imx6u.patch
+			│       │   └── custom
+			│       │       └── defconfig
+			│       └── linux-dey_4.1.bbappend
+			└── sdk
+			    └── config
+			        └── custom
+			            ├── bblayers.conf.sample
+			            ├── conf-notes.txt
+			            └── local.conf.sample
+			
+			13 directories, 13 files
+			digi@digi-VM:/usr/local/dey-2.2/sources$
+			
+			$ cd meta-custom/
+			$ git init
+			Initialized empty Git repository in /usr/local/dey-2.2/sources/meta-custom/.git/
+			
+			$ git add .
+			
+			$ git commit -m "first commit"
+			
+			[master (root-commit) a69476a] first commit
+			 13 files changed, 2154 insertions(+)
+			 create mode 100644 README.md
+			 create mode 100644 conf/layer.conf
+			 create mode 100644 conf/machine/custom.conf
+			 create mode 100755 recipes-bsp/u-boot/u-boot-dey-2015.04/0001-Add-custom-platform-from-reference-ccimx6ulstarter.patch
+			 create mode 100644 recipes-bsp/u-boot/u-boot-dey-2015.04/custom/boot.txt
+			 create mode 100644 recipes-bsp/u-boot/u-boot-dey-2015.04/custom/install_linux_fw_sd.txt
+			 create mode 100644 recipes-bsp/u-boot/u-boot-dey_2015.04.bbappend
+			 create mode 100755 recipes-kernel/linux/linux-dey-4.1/0001-dts-Copy-imx6ul-ccimx6ulstarter-id129.dts-into-imx6u.patch
+			 create mode 100644 recipes-kernel/linux/linux-dey-4.1/custom/defconfig
+			 create mode 100644 recipes-kernel/linux/linux-dey_4.1.bbappend
+			 create mode 100644 sdk/config/custom/bblayers.conf.sample
+			 create mode 100644 sdk/config/custom/conf-notes.txt
+			 create mode 100644 sdk/config/custom/local.conf.sample
+			
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ git remote add origin https://github.com/AndreasBurghart/meta-custom.git
+			digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ git push -u origin master
+			Username for 'https://github.com': andreas.burghart@digi.com
+			Password for 'https://andreas.burghart@digi.com@github.com': 
+			Counting objects: 28, done.
+			Delta compression using up to 2 threads.
+			Compressing objects: 100% (22/22), done.
+			Writing objects: 100% (28/28), 21.01 KiB | 0 bytes/s, done.
+			Total 28 (delta 0), reused 0 (delta 0)
+			To https://github.com/AndreasBurghart/meta-custom.git
+			 * [new branch]      master -> master
+			Branch master set up to track remote branch master from origin.
+digi@digi-VM:/usr/local/dey-2.2/sources/meta-custom$ 
